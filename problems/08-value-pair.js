@@ -12,6 +12,12 @@ valuePair(object1, object2, 'name'); // => [ 'One', 'Two' ]
 
 function valuePair(obj1, obj2, key) {
   // Your code here
+  let objects = [obj1, obj2];
+  let values = [];
+  for(let i = 0; i < objects.length; i++) {
+    values.push(objects[i][key])
+  }
+  return values
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
