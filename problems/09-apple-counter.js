@@ -30,7 +30,31 @@ appleCounter(obj3); // => 3
 
 function appleCounter(appleObj) {
   // Your code here
+  let fruits = Object.keys(appleObj)
+  let counter = 0;
+  for(let i = 0; i < fruits.length; i++) {
+    if(fruits[i].toLowerCase().includes('apple')) counter++
+  } 
+  return counter
 }
+
+let obj = { banana: "yay!" };
+appleCounter(obj); // => 0
+
+let obj1 = { crabapple: "yum!" };
+appleCounter(obj1); // => 1
+
+let obj2 = { crabapple: "yum!", honeyapple: "super yum", banana: "yay" };
+appleCounter(obj2); // => 2
+
+
+let obj3 = {
+  crabApple: "yum!",
+  honeyApple: "super yum",
+  banana: "yay",
+  bigapple: "NYC"
+};
+appleCounter(obj3); // => 3
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = appleCounter;
